@@ -3,9 +3,10 @@
 """ This program is just to cause a timestamp to be written to a csv to be
 displayed on a web page. This is purely for testing/learning purposes."""
 
-import time
+import datetime
 
-now = time.time()
-txt_file = open("timestamps.txt", "w")
+now = datetime.datetime.now()
+now.strftime('%Y-%m-%d')
+txt_file = open("timestamp.txt", "w")
 txt_file.write("Last time python program was run: " + str(now))
 txt_file.close()
